@@ -1,0 +1,9 @@
+*.00*
+backup
+data
+animals.bin
+building.bin
+events.bin
+types.bin
+vehicles.bin
+zombies.bin
