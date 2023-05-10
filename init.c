@@ -1,4 +1,6 @@
 #include "$CurrentDir:mpmissions\dayzOffline.chernarusplus\EditorFiles\objects_crasno.c"
+#include "$CurrentDir:mpmissions\dayzOffline.chernarusplus\custom_scripts\sets.c"
+//ref StartSetsPlayersConfig StartSetsPlayers = new StartSetsPlayersConfig();
 void main()
 {
 	//INIT ECONOMY--------------------------------------
@@ -30,6 +32,7 @@ void main()
 		}
 	}
 	SpawnTEST();
+	
 }
 
 class CustomMission: MissionServer
@@ -47,6 +50,18 @@ class CustomMission: MissionServer
 	override PlayerBase CreateCharacter(PlayerIdentity identity, vector pos, ParamsReadContext ctx, string characterName)
 	{
 		string arrayPlayersAdmins[2]={"ArtH3sbCJAksPQZgAh8NrMdvWHsA9ZFJegHvK_0VJgY=", "bbbbbbbbbbbbbbbbbbbbbb"};
+		
+//		GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).Call(GetGame().AdminLog, "Character "  + characterName + " spawn");
+		
+		
+		for (int i=0; i<2; i++)
+			{
+				if (identity.GetId()==arrayPlayersAdmins[i])
+				{
+					characterName="SurvivorF_Keiko";
+				}
+			}
+		
 		Entity playerEnt;
 		playerEnt = GetGame().CreatePlayer( identity, characterName, pos, 0, "NONE" );
 		Class.CastTo( m_player, playerEnt );
@@ -55,15 +70,6 @@ class CustomMission: MissionServer
 		GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).Call(GetGame().AdminLog, "Player '" + identity.GetName() + "' (id=" + identity.GetId() + ") player info");
 //		Error("Player info | uid " + identity.GetId() + " | name " + identity.GetName()) //дропает функцию 
 		
-		for (int i=0; i<2; i++)
-			{
-			GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).Call(GetGame().AdminLog, "Player '" + identity.GetName() + "' (id=" + identity.GetId() + ") ZALUPA");
-			if (identity.GetId()==arrayPlayersAdmins[i])
-				{
-					GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).Call(GetGame().AdminLog, "Player '" + identity.GetName() + "' (id=" + identity.GetId() + ") YA PROSHEL IF " + arrayPlayersAdmins[i]);
-				}
-			}
-
 		return m_player;
 	}
 
@@ -73,6 +79,7 @@ class CustomMission: MissionServer
 		EntityAI itemEnt;
 		ItemBase itemBs;
 		float rand;
+		//PlayerBase my_test_player;
 
 		itemClothing = player.FindAttachmentBySlotName( "Body" );
 		if ( itemClothing )
@@ -104,7 +111,15 @@ class CustomMission: MissionServer
 			SetRandomHealth( itemClothing );
 		
 		itemClothing = player.FindAttachmentBySlotName( "Feet" );
+		
+
+		//my_test_player=player;
+		//GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).Call(GetGame().AdminLog, "Player "  + my_test_player.GetIdentity().GetId() + " player info"); // ломает аддон Community tools
+		
+		StartSetsPlayer(player);
 	}
+	
+	
 };
 
 Mission CreateCustomMission(string path)

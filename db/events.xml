@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <events>
     <event name="AmbientHen">
-        <nominal>8</nominal>
+        <nominal>3</nominal>
         <min>0</min>
         <max>50</max>
         <lifetime>33</lifetime>
@@ -21,7 +21,7 @@
         </children>
     </event>
     <event name="AnimalBear">
-        <nominal>6</nominal>
+        <nominal>0</nominal>
         <min>2</min>
         <max>2</max>
         <lifetime>180</lifetime>
@@ -38,7 +38,7 @@
         </children>
     </event>
     <event name="AnimalCow">
-        <nominal>10</nominal>
+        <nominal>7</nominal>
         <min>2</min>
         <max>3</max>
         <lifetime>180</lifetime>
@@ -60,7 +60,7 @@
         </children>
     </event>
     <event name="AnimalDeer">
-        <nominal>15</nominal>
+        <nominal>9</nominal>
         <min>2</min>
         <max>4</max>
         <lifetime>180</lifetime>
@@ -78,7 +78,7 @@
         </children>
     </event>
     <event name="AnimalGoat">
-        <nominal>15</nominal>
+        <nominal>8</nominal>
         <min>1</min>
         <max>3</max>
         <lifetime>180</lifetime>
@@ -98,7 +98,7 @@
         </children>
     </event>
     <event name="AnimalPig">
-        <nominal>15</nominal>
+        <nominal>6</nominal>
         <min>1</min>
         <max>2</max>
         <lifetime>180</lifetime>
@@ -115,7 +115,7 @@
         </children>
     </event>
     <event name="AnimalRoeDeer">
-        <nominal>14</nominal>
+        <nominal>10</nominal>
         <min>2</min>
         <max>3</max>
         <lifetime>180</lifetime>
@@ -133,7 +133,7 @@
         </children>
     </event>
     <event name="AnimalSheep">
-        <nominal>10</nominal>
+        <nominal>5</nominal>
         <min>4</min>
         <max>5</max>
         <lifetime>180</lifetime>
@@ -151,7 +151,7 @@
         </children>
     </event>
     <event name="AnimalWildBoar">
-        <nominal>12</nominal>
+        <nominal>7</nominal>
         <min>1</min>
         <max>3</max>
         <lifetime>180</lifetime>
@@ -168,7 +168,7 @@
         </children>
     </event>
     <event name="AnimalWolf">
-        <nominal>15</nominal>
+        <nominal>8</nominal>
         <min>4</min>
         <max>6</max>
         <lifetime>180</lifetime>
@@ -728,7 +728,7 @@
         <children/>
     </event>
     <event name="StaticHeliCrash">
-        <nominal>10</nominal>
+        <nominal>3</nominal>
         <min>0</min>
         <max>0</max>
         <lifetime>2100</lifetime>

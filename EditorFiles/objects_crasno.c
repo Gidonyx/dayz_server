@@ -1,5 +1,6 @@
 #include "$CurrentDir:mpmissions\dayzOffline.chernarusplus\hueta_krasnostav.c"
 
+
 void SpawnTEST()
 {
 SpawnObject("Land_Mil_ATC_Big", "12380.313477 155.836731 12510.117188", "62.747238 -0.000000 -0.000000", 0.999994);
